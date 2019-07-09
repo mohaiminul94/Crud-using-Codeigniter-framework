@@ -23,8 +23,8 @@ class Welcome extends CI_Controller {
 		$this->load->view('welcome_message');
 	}
 	
-	public function new()
+	public function dashboard()
 	{
-		echo "Hello Rabid";
+		$this->load->view('dashboard');
 	}
 }

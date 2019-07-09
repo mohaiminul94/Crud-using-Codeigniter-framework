@@ -1,89 +1,105 @@
-<?php
-defined('BASEPATH') OR exit('No direct script access allowed');
-?><!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
+
+<!-- Mirrored from bootstrapmaster.com/live/metro/login.html by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 08 Jan 2018 16:57:00 GMT -->
 <head>
+	
+	<!-- start: Meta -->
 	<meta charset="utf-8">
-	<title>Welcome to CodeIgniter</title>
+	<title>Metro Admin Template - Metro UI Style Bootstrap Admin Template</title>
+	<meta name="description" content="Metro Admin Template.">
+	<meta name="author" content="Łukasz Holeczek">
+	<meta name="keyword" content="Metro, Metro UI, Dashboard, Bootstrap, Admin, Template, Theme, Responsive, Fluid, Retina">
+	<!-- end: Meta -->
+	
+	<!-- start: Mobile Specific -->
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<!-- end: Mobile Specific -->
+	
+	<!-- start: CSS -->
+	<link id="bootstrap-style" href="userpanel/css/bootstrap.min.css" rel="stylesheet">
+	<link href="userpanel/css/bootstrap-responsive.min.css" rel="stylesheet">
+	<link id="base-style" href="userpanel/css/style.css" rel="stylesheet">
+	<link id="base-style-responsive" href="userpanel/css/style-responsive.css" rel="stylesheet">
+	<link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800&amp;subset=latin,cyrillic-ext,latin-ext' rel='stylesheet' type='text/css'>
+	<!-- end: CSS -->
+	
 
-	<style type="text/css">
-
-	::selection { background-color: #E13300; color: white; }
-	::-moz-selection { background-color: #E13300; color: white; }
-
-	body {
-		background-color: #fff;
-		margin: 40px;
-		font: 13px/20px normal Helvetica, Arial, sans-serif;
-		color: #4F5155;
-	}
-
-	a {
-		color: #003399;
-		background-color: transparent;
-		font-weight: normal;
-	}
-
-	h1 {
-		color: #444;
-		background-color: transparent;
-		border-bottom: 1px solid #D0D0D0;
-		font-size: 19px;
-		font-weight: normal;
-		margin: 0 0 14px 0;
-		padding: 14px 15px 10px 15px;
-	}
-
-	code {
-		font-family: Consolas, Monaco, Courier New, Courier, monospace;
-		font-size: 12px;
-		background-color: #f9f9f9;
-		border: 1px solid #D0D0D0;
-		color: #002166;
-		display: block;
-		margin: 14px 0 14px 0;
-		padding: 12px 10px 12px 10px;
-	}
-
-	#body {
-		margin: 0 15px 0 15px;
-	}
-
-	p.footer {
-		text-align: right;
-		font-size: 11px;
-		border-top: 1px solid #D0D0D0;
-		line-height: 32px;
-		padding: 0 10px 0 10px;
-		margin: 20px 0 0 0;
-	}
-
-	#container {
-		margin: 10px;
-		border: 1px solid #D0D0D0;
-		box-shadow: 0 0 8px #D0D0D0;
-	}
-	</style>
+	<!-- The HTML5 shim, for IE6-8 support of HTML5 elements -->
+	<!--[if lt IE 9]>
+	  	<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+		<link id="ie-style" href="css/ie.css" rel="stylesheet">
+	<![endif]-->
+	
+	<!--[if IE 9]>
+		<link id="ie9style" href="css/ie9.css" rel="stylesheet">
+	<![endif]-->
+		
+	<!-- start: Favicon -->
+	<link rel="shortcut icon" href="userpanel/img/favicon.ico">
+	<!-- end: Favicon -->
+	
+			<style type="text/css">
+			body { background: url(userpanel/img/bg-login.jpg) !important; }
+		</style>
+		
+		
+		
 </head>
+
 <body>
+		<div class="container-fluid-full">
+		<div class="row-fluid">
+					
+			<div class="row-fluid">
+				<div class="login-box">
+					<div class="icons">
+						<a href="index.html"><i class="halflings-icon home"></i></a>
+						<a href="#"><i class="halflings-icon cog"></i></a>
+					</div>
+					<h2>Login to your account</h2>
+					<form class="form-horizontal" action="http://bootstrapmaster.com/live/metro/index.html" method="post">
+						<fieldset>
+							
+							<div class="input-prepend" title="Username">
+								<span class="add-on"><i class="halflings-icon user"></i></span>
+								<input class="input-large span10" name="username" id="username" type="text" placeholder="type username"/>
+							</div>
+							<div class="clearfix"></div>
 
-<div id="container">
-	<h1>Welcome to CodeIgniter!</h1>
+							<div class="input-prepend" title="Password">
+								<span class="add-on"><i class="halflings-icon lock"></i></span>
+								<input class="input-large span10" name="password" id="password" type="password" placeholder="type password"/>
+							</div>
+							<div class="clearfix"></div>
+							
+							<label class="remember" for="remember"><input type="checkbox" id="remember" />Remember me</label>
 
-	<div id="body">
-		<p>The page you are looking at is being generated dynamically by CodeIgniter.</p>
+							<div class="button-login">	
+								<button type="submit" class="btn btn-primary">Login</button>
+							</div>
+							<div class="clearfix"></div>
+					</form>
+					<hr>
+					<h3>Forgot Password?</h3>
+					<p>
+						No problem, <a href="#">click here</a> to get a new password.
+					</p>	
+				</div><!--/span-->
+			</div><!--/row-->
+			
 
-		<p>If you would like to edit this page you'll find it located at:</p>
-		<code>application/views/welcome_message.php</code>
+	</div><!--/.fluid-container-->
+	
+		</div><!--/fluid-row-->
+	
+	<!-- start: JavaScript-->
 
-		<p>The corresponding controller for this page is found at:</p>
-		<code>application/controllers/Welcome.php</code>
-
-		<p>If you are exploring CodeIgniter for the very first time, you should start by reading the <a href="user_guide/">User Guide</a>.</p>
-	</div>
-
-	<p class="footer">Page rendered in <strong>{elapsed_time}</strong> seconds. <?php echo  (ENVIRONMENT === 'development') ?  'CodeIgniter Version <strong>' . CI_VERSION . '</strong>' : '' ?></p>
-</div>
-
+		<script src="js/jquery-1.9.1.min.js"></script>
+		<script src="js/custom.js"></script>
+	<!-- end: JavaScript-->
+	
 </body>
+
+<!-- Mirrored from bootstrapmaster.com/live/metro/login.html by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 08 Jan 2018 16:57:01 GMT -->
 </html>
