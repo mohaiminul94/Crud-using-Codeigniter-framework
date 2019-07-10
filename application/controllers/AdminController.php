@@ -5,7 +5,9 @@ class AdminController extends CI_Controller {
 
 	public function home()
 	{
-		$this->load->view('dashboard');
+        $data= array();
+        $data['dashboard']= $this->load->view('pages/dashboard','',true);
+		$this->load->view('index',$data);
 	}
 	
 }
