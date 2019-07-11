@@ -53,7 +53,8 @@ $route['default_controller'] = 'welcome';
 $route['404_override'] = '';
 $route['translate_uri_dashes'] = FALSE;
 
-$route['dashboard']= 'AdminController/home';
+$route['login']= 'AdminController/home';
+$route['dashboard']= 'AdminController/dashboard';
 $route['add-student']= 'AdminController/addStudent';
 $route['manage-student']= 'AdminController/manageStudent';
 $route['edit-admin']= 'AdminController/editAdmin';

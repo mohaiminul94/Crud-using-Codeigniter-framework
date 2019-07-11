@@ -58,12 +58,12 @@
 						<a href="#"><i class="halflings-icon cog"></i></a>
 					</div>
 					<h2>Login to your account</h2>
-					<form class="form-horizontal" action="<?php base_url() ?>dashboard" method="post">
+					<form class="form-horizontal" action="<?php base_url() ?>login" method="post">
 						<fieldset>
 							
 							<div class="input-prepend" title="Username">
 								<span class="add-on"><i class="halflings-icon user"></i></span>
-								<input class="input-large span10" name="username" id="username" type="text" placeholder="type username"/>
+								<input class="input-large span10" name="name" id="name" type="text" placeholder="type username"/>
 							</div>
 							<div class="clearfix"></div>
 
