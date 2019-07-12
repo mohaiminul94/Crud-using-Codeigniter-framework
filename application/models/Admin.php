@@ -12,6 +12,22 @@ class Admin extends CI_Model {
         $query_result= $this->db->get();
         $result= $query_result->row();
         return $result;
-	}
-	
+    }
+    
+    public function saveStudent() {
+        $data= array();
+        $data['student_name']= $this->input->post('student_name',true);
+        $data['student_phone']= $this->input->post('student_phone',true);
+        $data['student_id']= $this->input->post('student_id',true);
+        $this->db->insert('students',$data);
+    }
+    
+    public function allStudentsinfo() {
+        $this->db->select('*');
+        $this->db->from('students');
+        $query_result= $this->db->get();
+        $allStudentsInfo= $query_result->result();
+        return $allStudentsInfo;
+    }
+
 }

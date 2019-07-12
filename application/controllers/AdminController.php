@@ -50,10 +50,20 @@ class AdminController extends CI_Controller {
 		$this->load->view('index',$data);
 	}
     
+	public function saveStudent()
+	{
+		$this->Admin->saveStudent();
+		$notification= array();
+		$notification['message']= 'Student Added Successfully!';
+		$this->session->set_userdata($notification);
+		redirect('add-student');
+	}
+
     public function manageStudent()
 	{
-        $data= array();
-        $data['dashboard']= $this->load->view('pages/manageStudent','',true);
+		$data= array();
+		$data['allStudentsinfo']= $this->Admin->allStudentsinfo();
+        $data['dashboard']= $this->load->view('pages/manageStudent',$data,true);
 		$this->load->view('index',$data);
 	}
     
@@ -63,5 +73,6 @@ class AdminController extends CI_Controller {
         $data['dashboard']= $this->load->view('pages/editAdmin','',true);
 		$this->load->view('index',$data);
 	}
+	
 	
 }

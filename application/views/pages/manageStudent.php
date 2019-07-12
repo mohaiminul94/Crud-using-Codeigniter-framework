@@ -23,11 +23,14 @@
                 </thead>
 
                 <tbody role="alert" aria-live="polite" aria-relevant="all">
+                <?php
+                    foreach($allStudentsinfo as $studentInfo) {
+                ?>     
                     <tr>
-                        <td class="  sorting_1">01</td>
-                        <td class="center ">MI Rabid</td>
-                        <td class="center ">09238674635</td>
-                        <td class="center ">151-15-335</td>
+                        <td class="  sorting_1"><?php echo $studentInfo->id ?></td>
+                        <td class="center "><?php echo $studentInfo->student_name ?></td>
+                        <td class="center "><?php echo $studentInfo->student_phone ?></td>
+                        <td class="center "><?php echo $studentInfo->student_id ?></td>
                         <td class="center ">
                             <a class="btn btn-info" href="#">
                                 <i class="halflings-icon white edit"></i>
@@ -37,6 +40,9 @@
                             </a>
                         </td>
                     </tr>
+                <?php   
+                    }
+                ?>   
                 </tbody>
             </table>
             

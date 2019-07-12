@@ -60,3 +60,5 @@ $route['dashboard']= 'AdminController/dashboard';
 $route['add-student']= 'AdminController/addStudent';
 $route['manage-student']= 'AdminController/manageStudent';
 $route['edit-admin']= 'AdminController/editAdmin';
+
+$route['save-student']= 'AdminController/saveStudent';
