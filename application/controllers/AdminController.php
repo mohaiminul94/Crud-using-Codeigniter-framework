@@ -27,6 +27,14 @@ class AdminController extends CI_Controller {
 		}
 
 	}
+
+	public function logout() {
+		$this->session->unset_userdata('id');
+		$this->session->unset_userdata('name');
+		$sData['message']= 'Logout Successfully!!';
+		$this->session->set_userdata($sData);
+		redirect(base_url());
+	}
     
     public function dashboard()
 	{

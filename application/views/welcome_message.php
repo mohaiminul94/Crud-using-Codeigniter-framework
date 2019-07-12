@@ -58,7 +58,7 @@
 						<a href="#"><i class="halflings-icon cog"></i></a>
 					</div>
 					<h2>Login to your account</h2>
-
+				
 					<?php
 						
 						$message= $this->session->userdata('message');
