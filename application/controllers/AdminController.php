@@ -3,6 +3,8 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 class AdminController extends CI_Controller {
 
+	
+
 	public function home()
 	{
 
@@ -10,12 +12,18 @@ class AdminController extends CI_Controller {
 		$password= $this->input->post('password',true);
 		$this->load->model('Admin');
 		$result= $this->Admin->login($name,$password);
+		$sData= array();
 
 		if($result) {
+			$sData['id']= $request->$id;
+			$sData['name']= $request->$name;
+			$this->session->set_userdata($sData);
 			redirect('dashboard');
 		}
 		else {
-			echo "Wrong Credentials!!!";
+			$sData['message']= 'Wrong Credentials!!';
+			$this->session->set_userdata($sData);
+			redirect(base_url());
 		}
 
 	}

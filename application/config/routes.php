@@ -54,6 +54,7 @@ $route['404_override'] = '';
 $route['translate_uri_dashes'] = FALSE;
 
 $route['login']= 'AdminController/home';
+
 $route['dashboard']= 'AdminController/dashboard';
 $route['add-student']= 'AdminController/addStudent';
 $route['manage-student']= 'AdminController/manageStudent';

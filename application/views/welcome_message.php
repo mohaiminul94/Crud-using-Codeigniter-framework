@@ -58,6 +58,18 @@
 						<a href="#"><i class="halflings-icon cog"></i></a>
 					</div>
 					<h2>Login to your account</h2>
+
+					<?php
+						
+						$message= $this->session->userdata('message');
+
+						if($message) {
+							echo "<h2 class='alert alert-danger'>$message</h2>";
+							$this->session->unset_userdata('message');
+						}
+
+					?>
+
 					<form class="form-horizontal" action="<?php base_url() ?>login" method="post">
 						<fieldset>
 							
@@ -95,8 +107,8 @@
 	
 	<!-- start: JavaScript-->
 
-		<script src="js/jquery-1.9.1.min.js"></script>
-		<script src="js/custom.js"></script>
+		<!-- <script src="userpanel/js/jquery-1.9.1.min.js"></script>
+		<script src="userpanel/js/custom.js"></script> -->
 	<!-- end: JavaScript-->
 	
 </body>
