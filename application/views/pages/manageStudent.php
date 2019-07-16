@@ -47,7 +47,8 @@
                             <a class="btn btn-info" href="<?php base_url() ?>edit-student/<?php echo $studentInfo->id ?>">
                                 <i class="halflings-icon white edit"></i>
                             </a>
-                            <a class="btn btn-danger" href="<?php base_url() ?>edit-student/<?php echo $studentInfo->id ?>">
+                            <a class="btn btn-danger" href="<?php base_url() ?>delete-student/<?php echo $studentInfo->id ?>"
+                                onclick="return confirm('Are you sure you want to delete this Student?');">
                                 <i class="halflings-icon white trash"></i>
                             </a>
                         </td>

@@ -64,3 +64,4 @@ $route['edit-admin']= 'AdminController/editAdmin';
 $route['save-student']= 'AdminController/saveStudent';
 $route['edit-student/(.+)']= 'AdminController/editStudent/$1';
 $route['update-student']= 'AdminController/updateStudent';
+$route['delete-student/(.+)']= 'AdminController/deleteStudent/$1';

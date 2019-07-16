@@ -11,12 +11,6 @@
     <div class="box-content">
         <form class="form-horizontal">
             <fieldset>
-                <div class="control-group">
-                    <label class="control-label" for="typeahead">Admin Name </label>
-                    <div class="controls">
-                        <input type="text" class="span6 typeahead" id="typeahead" data-provide="typeahead">
-                    </div>
-                </div>
 
                 <div class="control-group">
                     <label class="control-label" for="fileInput">Select Image</label>
@@ -24,8 +18,9 @@
                         <div class="uploader" id="uniform-fileInput"><input class="input-file uniform_on" id="fileInput" type="file"><span class="filename" style="-moz-user-select: none;">No file selected</span><span class="action" style="-moz-user-select: none;">Choose File</span></div>
                     </div>
                 </div>
+
                 <div class="form-actions">
-                    <button type="submit" class="btn btn-primary">Save changes</button>
+                    <button type="submit" class="btn btn-primary">Upload Image</button>
                     <button type="reset" class="btn">Cancel</button>
                 </div>
             </fieldset>

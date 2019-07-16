@@ -85,6 +85,15 @@ class AdminController extends CI_Controller {
 		redirect('manage-student');
 	}
 	
+	public function deleteStudent($id)
+	{
+        $this->Admin->deleteStudent($id);
+		$notification= array();
+		$notification['message']= 'Student Deleted Successfully!';
+		$this->session->set_userdata($notification);
+		redirect('manage-student');
+	}
+	
 	public function editAdmin()
 	{
         $data= array();

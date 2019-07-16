@@ -32,7 +32,7 @@
                 </div>
                 <input type="hidden" name="id" value="<?php echo $editStudent->id ?>">
                 <div class="form-actions">
-                    <button type="submit" class="btn btn-primary">Save changes</button>
+                    <button type="submit" class="btn btn-primary">Update</button>
                     <button type="reset" class="btn">Cancel</button>
                 </div>
             </fieldset>
