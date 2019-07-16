@@ -65,9 +65,27 @@ class AdminController extends CI_Controller {
 		$data['allStudentsinfo']= $this->Admin->allStudentsinfo();
         $data['dashboard']= $this->load->view('pages/manageStudent',$data,true);
 		$this->load->view('index',$data);
+		
 	}
     
-    public function editAdmin()
+    public function editStudent($id)
+	{
+        $data= array();
+		$data['editStudent']= $this->Admin->editStudent($id);
+		$data['dashboard']= $this->load->view('pages/editStudent',$data,true);
+		$this->load->view('index',$data);
+	}
+	
+	public function updateStudent()
+	{
+        $this->Admin->updateStudent();
+		$notification= array();
+		$notification['message']= 'Data Updated Successfully!';
+		$this->session->set_userdata($notification);
+		redirect('manage-student');
+	}
+	
+	public function editAdmin()
 	{
         $data= array();
         $data['dashboard']= $this->load->view('pages/editAdmin','',true);

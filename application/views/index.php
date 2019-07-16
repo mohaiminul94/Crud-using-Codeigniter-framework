@@ -17,10 +17,10 @@
 	<!-- end: Mobile Specific -->
 	
 	<!-- start: CSS -->
-	<link id="bootstrap-style" href="userpanel/css/bootstrap.min.css" rel="stylesheet">
-	<link href="userpanel/css/bootstrap-responsive.min.css" rel="stylesheet">
-	<link id="base-style" href="userpanel/css/style.css" rel="stylesheet">
-	<link id="base-style-responsive" href="userpanel/css/style-responsive.css" rel="stylesheet">
+	<link id="bootstrap-style" href="<?php echo base_url() ?>userpanel/css/bootstrap.min.css" rel="stylesheet">
+	<link href="<?php echo base_url() ?>userpanel/css/bootstrap-responsive.min.css" rel="stylesheet">
+	<link id="base-style" href="<?php echo base_url() ?>userpanel/css/style.css" rel="stylesheet">
+	<link id="base-style-responsive" href="<?php echo base_url() ?>userpanel/css/style-responsive.css" rel="stylesheet">
 	<link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800&amp;subset=latin,cyrillic-ext,latin-ext' rel='stylesheet' type='text/css'>
 	<!-- end: CSS -->
 	
@@ -336,10 +336,10 @@
 			<div id="sidebar-left" class="span2">
 				<div class="nav-collapse sidebar-nav">
 					<ul class="nav nav-tabs nav-stacked main-menu">
-						<li><a href="<?php base_url() ?>dashboard"><i class="icon-bar-chart"></i><span class="hidden-tablet"> Dashboard</span></a></li>
-						<li><a href="<?php base_url() ?>add-student"><i class="icon-bar-chart"></i><span class="hidden-tablet"> Add Student</span></a></li>
-						<li><a href="<?php base_url() ?>manage-student"><i class="icon-bar-chart"></i><span class="hidden-tablet"> Manage Students</span></a></li>
-						<li><a href="<?php base_url() ?>edit-admin"><i class="icon-bar-chart"></i><span class="hidden-tablet"> Edit Admin</span></a></li>
+						<li><a href="<?php echo base_url() ?>dashboard"><i class="icon-bar-chart"></i><span class="hidden-tablet"> Dashboard</span></a></li>
+						<li><a href="<?php echo base_url() ?>add-student"><i class="icon-bar-chart"></i><span class="hidden-tablet"> Add Student</span></a></li>
+						<li><a href="<?php echo base_url() ?>manage-student"><i class="icon-bar-chart"></i><span class="hidden-tablet"> Manage Students</span></a></li>
+						<li><a href="<?php echo base_url() ?>edit-admin"><i class="icon-bar-chart"></i><span class="hidden-tablet"> Edit Admin</span></a></li>
 					</ul>
 				</div>
 			</div>
@@ -355,7 +355,9 @@
 			<!-- start: Content -->
 			<div id="content" class="span10">
 			
-			<?php echo $dashboard; ?>
+			<?php
+			//var_dump($dashboard); die;
+			echo $dashboard; ?>
 
 			</div><!--/.fluid-container-->
 	

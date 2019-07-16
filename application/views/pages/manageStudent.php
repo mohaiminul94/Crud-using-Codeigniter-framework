@@ -1,3 +1,4 @@
+
 <div class="box span12">
 
     <div class="box-header" data-original-title="">
@@ -22,6 +23,17 @@
                     </tr>
                 </thead>
 
+                <div style="height:70px;width:100%;">
+                    <?php
+                        $notification = $this->session->userdata('message');
+
+                        if ($notification) {
+                            echo "<h2 class='alert alert-success'>$notification</h2>";
+                            $this->session->unset_userdata('message');
+                        }
+                    ?>
+                </div>
+
                 <tbody role="alert" aria-live="polite" aria-relevant="all">
                 <?php
                     foreach($allStudentsinfo as $studentInfo) {
@@ -32,10 +44,10 @@
                         <td class="center "><?php echo $studentInfo->student_phone ?></td>
                         <td class="center "><?php echo $studentInfo->student_id ?></td>
                         <td class="center ">
-                            <a class="btn btn-info" href="#">
+                            <a class="btn btn-info" href="<?php base_url() ?>edit-student/<?php echo $studentInfo->id ?>">
                                 <i class="halflings-icon white edit"></i>
                             </a>
-                            <a class="btn btn-danger" href="#">
+                            <a class="btn btn-danger" href="<?php base_url() ?>edit-student/<?php echo $studentInfo->id ?>">
                                 <i class="halflings-icon white trash"></i>
                             </a>
                         </td>
